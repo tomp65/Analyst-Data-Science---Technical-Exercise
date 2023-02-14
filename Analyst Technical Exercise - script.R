@@ -274,8 +274,6 @@ growthrate_function <- function(data, measure, year1, year2){
 
 ninetyfivefunction_high(data = general_data_long, measure = "GWP (£m)", year = 2020)
 
-ninetyfivefunction_low(data = general_data_long, measure = "SCR coverage ratio", year = 2020)
-
 high_GWP <- ninety_function_high(data = general_data_long, measure = "GWP (£m)", year = 2020)
 
 high_GWP <- as.vector(high_GWP$Firm)
@@ -578,8 +576,5 @@ ggplot(NCR_chart_firms, aes(x=Year, y=Value, group=Firm, color = Firm)) +
   geom_line()+
   theme_minimal() +
   ylab("Net combined ratio")
-
-SCR_2020 <- general_data_long %>%
-  filter(Measure == "SCR coverage ratio" & Year == 2020)
 
 
